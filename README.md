@@ -1,6 +1,6 @@
 # Supplementary Material
 
-This repository includes step-by-step experiment code, extended methodological details, and summarized experiment results. The full workflow and evaluation pipeline are organized into clearly structured modules corresponding to our large-scale crop classification study.
+This study presents the first large-scale crop mapping method review supported by systematic experiments. We evaluated end-to-end, pixel-wise crop classification workflow and their spatial, temporal, and sensor transferability across five diverse agricultural sites in the U.S. Corn Belt and Vojvodina, Serbia. This repository includes step-by-step experiment code, extended methodological details, and summarized experiment results. The full workflow and evaluation pipeline are organized into clearly structured modules corresponding to our large-scale crop classification study.
 
 ## 🔁 Workflow Overview
 
