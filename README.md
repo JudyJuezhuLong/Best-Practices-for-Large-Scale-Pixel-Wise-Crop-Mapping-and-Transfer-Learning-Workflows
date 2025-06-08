@@ -67,7 +67,7 @@ All the experiments were conducted using Python 3.9.18 with PyTorch 1.11.0, runn
   ├── discussion_28_29_CDLvsTrusted/
   ├── discussion_28_31_CDLvsTrusted/
   ├── discussion_27_30_CDLvsTrusted/
-  └── evaluation_4000_target_sites_trusted_samples/
+  └── evaluation_40000_source_sites_trusted_samples/
   ```
 
 ### (7) 🔬 Four Fine-Tuning Treatments
