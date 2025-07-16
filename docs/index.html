@@ -25,7 +25,6 @@
 <!-- Leaflet GeoTIFF Plugin -->
 <script src="https://unpkg.com/geotiff@1.0.0-beta.10/dist/geotiff.browser.min.js"></script>
 <script src="https://unpkg.com/leaflet-geotiff@2.0.5/dist/leaflet-geotiff.min.js"></script>
-<script src="https://unpkg.com/leaflet-geotiff@2.0.5/dist/leaflet-geotiff-palette.min.js"></script>
 
 <!-- Load map -->
 <script>
@@ -42,17 +41,7 @@
     .then(buffer => {
       const layer = new GeoTIFFLayer({
         source: buffer,
-        pixelValuesToColorFn: function (values) {
-          const value = values[0];
-          if (value === 0) return 'yellow';
-          if (value === 1) return 'green';
-          if (value === 2) return 'grey';
-          if (value === 999) return null;  // transparent for NoData
-          return null;
-        },
-        clampLow: false,
-        clampHigh: false,
-        opacity: 0.7
+        opacity: 1.0
       });
       layer.addTo(map);
     })
