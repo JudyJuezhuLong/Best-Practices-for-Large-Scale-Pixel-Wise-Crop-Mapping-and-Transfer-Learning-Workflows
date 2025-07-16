@@ -35,18 +35,6 @@
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  // Load GeoTIFF prediction
-  fetch('SiteE_prediction_map_target_SiteE2023_source_SiteA2023_Fine_Tuning_R3_compress.tif')
-    .then(response => response.arrayBuffer())
-    .then(buffer => {
-      const layer = new GeoTIFFLayer({
-        source: buffer,
-        opacity: 1.0
-      });
-      layer.addTo(map);
-    })
-    .catch(err => console.error('TIFF loading error:', err));
-
   // Load region boundaries GeoJSON
   fetch('SiteE_tiles.geojson')
     .then(res => res.json())
