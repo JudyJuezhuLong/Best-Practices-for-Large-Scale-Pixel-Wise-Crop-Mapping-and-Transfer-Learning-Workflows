@@ -35,75 +35,31 @@
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  // Load region boundaries GeoJSON
-  fetch('SiteA_tile.geojson')
-    .then(res => res.json())
-    .then(data => {
-      L.geoJSON(data, {
-        style: {
-          color: "#000",
-          weight: 1,
-          fillOpacity: 0
-        }
-      }).addTo(map);
-    })
-    .catch(err => console.error('GeoJSON loading error:', err));
+// List of all study area GeoJSON files and their display styles
+const studyAreas = [
+  { file: 'SiteA_tiles.geojson', color: '#000000' },
+  { file: 'SiteB_tiles.geojson', color: '#000000' },
+  { file: 'SiteC_tiles.geojson', color: '#000000' },
+  { file: 'SiteD_tiles.geojson', color: '#000000' },
+  { file: 'SiteE_tiles.geojson', color: '#000000' }
+];
 
-  // Load region boundaries GeoJSON
-  fetch('SiteB_tile.geojson')
+// Load each GeoJSON
+studyAreas.forEach(area => {
+  fetch(area.file)
     .then(res => res.json())
     .then(data => {
       L.geoJSON(data, {
         style: {
-          color: "#000",
+          color: area.color,
           weight: 1,
           fillOpacity: 0
         }
       }).addTo(map);
     })
-    .catch(err => console.error('GeoJSON loading error:', err));
+    .catch(err => console.error(`GeoJSON loading error for ${area.file}:`, err));
+});
 
-  // Load region boundaries GeoJSON
-  fetch('SiteC_tile.geojson')
-    .then(res => res.json())
-    .then(data => {
-      L.geoJSON(data, {
-        style: {
-          color: "#000",
-          weight: 1,
-          fillOpacity: 0
-        }
-      }).addTo(map);
-    })
-    .catch(err => console.error('GeoJSON loading error:', err));
-	
-  // Load region boundaries GeoJSON
-  fetch('SiteD_tile.geojson')
-    .then(res => res.json())
-    .then(data => {
-      L.geoJSON(data, {
-        style: {
-          color: "#000",
-          weight: 1,
-          fillOpacity: 0
-        }
-      }).addTo(map);
-    })
-    .catch(err => console.error('GeoJSON loading error:', err));
-
-  // Load region boundaries GeoJSON
-  fetch('SiteE_tiles.geojson')
-    .then(res => res.json())
-    .then(data => {
-      L.geoJSON(data, {
-        style: {
-          color: "#000",
-          weight: 1,
-          fillOpacity: 0
-        }
-      }).addTo(map);
-    })
-    .catch(err => console.error('GeoJSON loading error:', err));
 </script>
 
 
