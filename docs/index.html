@@ -37,16 +37,17 @@
 
   // Load GeoTIFF prediction
   fetch('SiteE_prediction_map_target_SiteE2023_source_SiteA2023_Fine_Tuning_R3.tif')
-    .then(res => res.arrayBuffer())
+    .then(response => response.arrayBuffer())
     .then(buffer => {
       const layer = new GeoTIFFLayer({
         source: buffer,
-        pixelValuesToColorFn: values => {
-          const value = values[0];
-          if (value === 0) return 'yellow';
-          if (value === 1) return 'green';
-          if (value === 2) return 'grey';
-          return null; // transparent
+		pixelValuesToColorFn: function (values) {
+			const value = values[0];
+			  if (value === 0) return 'yellow';
+			  if (value === 1) return 'green';
+			  if (value === 2) return 'grey';
+			  if (value === 999) return null;  // transparent if NoData
+			  return null; // fallback
         },
         clampLow: false,
         clampHigh: false,
@@ -54,6 +55,7 @@
       });
       layer.addTo(map);
     });
+	.catch(err => console.error('TIFF loading error:', err));
 
   // Load region boundaries GeoJSON
   fetch('SiteE_tiles.geojson')
