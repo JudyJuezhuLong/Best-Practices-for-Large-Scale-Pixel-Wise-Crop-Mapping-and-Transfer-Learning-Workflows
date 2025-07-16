@@ -28,7 +28,7 @@
 
 <!-- Load map -->
 <script>
-  const map = L.map('map').setView([45.45, 20], 5); // Adjust to your center
+  const map = L.map('map').setView([45.45, 20], 5);
 
   // Add OpenStreetMap basemap
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -41,13 +41,13 @@
     .then(buffer => {
       const layer = new GeoTIFFLayer({
         source: buffer,
-		pixelValuesToColorFn: function (values) {
-			const value = values[0];
-			  if (value === 0) return 'yellow';
-			  if (value === 1) return 'green';
-			  if (value === 2) return 'grey';
-			  if (value === 999) return null;  // transparent if NoData
-			  return null; // fallback
+        pixelValuesToColorFn: function (values) {
+          const value = values[0];
+          if (value === 0) return 'yellow';
+          if (value === 1) return 'green';
+          if (value === 2) return 'grey';
+          if (value === 999) return null;  // transparent for NoData
+          return null;
         },
         clampLow: false,
         clampHigh: false,
@@ -55,7 +55,7 @@
       });
       layer.addTo(map);
     })
-	  .catch(err => console.error('TIFF loading error:', err));
+    .catch(err => console.error('TIFF loading error:', err));
 
   // Load region boundaries GeoJSON
   fetch('SiteE_tiles.geojson')
@@ -68,7 +68,8 @@
           fillOpacity: 0
         }
       }).addTo(map);
-    });
+    })
+    .catch(err => console.error('GeoJSON loading error:', err));
 </script>
 
 </body>
