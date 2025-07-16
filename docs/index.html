@@ -31,8 +31,7 @@
 
 <!-- Load map -->
 <script>
-  const map = L.map('map').setView([45.45, 20], 5);
->>>>>>> 50243f2ed13e567bf0747b0127ae037a648458f3
+  const map = L.map('map').setView([45.45, 20], 5); // Adjust this to your map center
 
   // Add OpenStreetMap basemap
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -40,7 +39,7 @@
   }).addTo(map);
 
   // Load GeoTIFF prediction
-  fetch('SiteE_prediction_map_target_SiteE2023_source_SiteA2023_Fine_Tuning_R3.tif')
+  fetch('SiteE_prediction_map_target_SiteE2023_source_SiteA2023_Fine_Tuning_R3_compress.tif')
     .then(response => response.arrayBuffer())
     .then(buffer => {
       const layer = new GeoTIFFLayer({
@@ -75,6 +74,7 @@
     })
     .catch(err => console.error('GeoJSON loading error:', err));
 </script>
+
 
 </body>
 </html>
