@@ -1,6 +1,8 @@
 # Supplementary Material
 
-This study presents the first large-scale crop mapping method review supported by systematic experiments. We evaluated end-to-end, pixel-wise crop classification workflow and their spatial, temporal, and sensor transferability across five diverse agricultural sites in the U.S. Corn Belt and Vojvodina, Serbia. This repository includes step-by-step experiment code, extended methodological details, and summarized experiment results. The full workflow and evaluation pipeline are organized into clearly structured modules corresponding to our large-scale crop classification study.
+Recent advances in machine learning have improved crop mapping efficiency, allowing scalable, automated mapping using ground truth data or prior knowledge. This study presents the first comprehensive review of large-scale, pixel-wise crop mapping workflows, encompassing both conventional supervised methods and emerging transfer learning approaches. The evaluation of best methods was conducted across five diverse agricultural sites (approximately 185 km by 170 km each) in the U.S. Soybean Belt and Vojvodina, Serbia. The study areas are visualized in the web map: https://judyjuezhulong.github.io/Best-Practices-for-Large-Scale-Pixel-Wise-Crop-Mapping-and-Transfer-Learning-Workflows/ 
+
+Grounded in the literature review, this study evaluated six preprocessing methods, eleven model architectures, and three transfer learning strategies through systematic experiments. The full workflow and evaluation pipeline are organized into clearly structured modules corresponding to our large-scale crop classification study. This repository includes step-by-step experiment code, extended methodological details, and summarized experiment results. 
 
 ## 🔁 Workflow Overview
 
