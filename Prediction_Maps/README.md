@@ -36,7 +36,7 @@ This folder contains full-scene/entire study area prediction and reference maps 
 ## 📍 Site E  
 **📌 Reference: Figure 17**  
 - Maps were generated using:
-  - **Direct transfer** 
+  - **Direct transfer** (Transformer model)
   - **Fine-tuning R3**-based transfer learning
   - **Fully supervised learning (RF model)**
 - The **RF model significantly underestimates cropland** and produces fragmented patterns.
