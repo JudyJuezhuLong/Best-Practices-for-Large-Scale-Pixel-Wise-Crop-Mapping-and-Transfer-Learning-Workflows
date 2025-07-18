@@ -98,11 +98,19 @@ This code is for reference and reproducibility. Due to size and resource constra
 ## ✔️ Cite the Work
 
 @misc{long2025bestpracticeslargescalepixelwise,
+
       title={Best Practices for Large-Scale, Pixel-Wise Crop Mapping and Transfer Learning Workflows}, 
+      
       author={Judy Long and Tao Liu and Sean Alexander Woznicki and Miljana Marković and Oskar Marko and Molly Sears},
+      
       year={2025},
+      
       eprint={2507.12590},
+      
       archivePrefix={arXiv},
+      
       primaryClass={cs.CV},
+      
       url={https://arxiv.org/abs/2507.12590}, 
+      
 }
