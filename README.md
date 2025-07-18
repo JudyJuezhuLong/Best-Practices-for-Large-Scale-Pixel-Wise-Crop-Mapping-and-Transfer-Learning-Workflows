@@ -1,6 +1,8 @@
-# Best Practices for Large-Scale, Pixel-Wise Crop Mapping and Transfer Learning Workflows
+# Supplementary Material
 
-doi: https://doi.org/10.48550/arXiv.2507.12590
+**Best Practices for Large-Scale, Pixel-Wise Crop Mapping and Transfer Learning Workflows**
+
+**doi: https://doi.org/10.48550/arXiv.2507.12590**
 
 Recent advances in machine learning have improved crop mapping efficiency, allowing scalable, automated mapping using ground truth data or prior knowledge. 
 
@@ -96,21 +98,14 @@ This code is for reference and reproducibility. Due to size and resource constra
 - Figures and visualizations mentioned in the main text are generated using results in the `results/` folder.
 
 ## ✔️ Cite the Work
-
-@misc{long2025bestpracticeslargescalepixelwise,
-
+```
+@misc{judylong2025,
       title={Best Practices for Large-Scale, Pixel-Wise Crop Mapping and Transfer Learning Workflows}, 
-      
       author={Judy Long and Tao Liu and Sean Alexander Woznicki and Miljana Marković and Oskar Marko and Molly Sears},
-      
       year={2025},
-      
       eprint={2507.12590},
-      
       archivePrefix={arXiv},
-      
       primaryClass={cs.CV},
-      
       url={https://arxiv.org/abs/2507.12590}, 
-      
 }
+```
